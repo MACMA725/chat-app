@@ -7,7 +7,15 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
+//Halaman Home
+app.get('/', (req, res) => {
+  res.render('home', {
+    title: "Halaman Home",
+    layout: "layout/mian"
+  })
+})
 
+//Halaman Login
 app.get("/login", (reg, res) => {
   res.render('login', {
     title: "Halaman Login",
@@ -15,5 +23,5 @@ app.get("/login", (reg, res) => {
   })
 })
 app.listen(port, () => {
-  console.log(`Runing in localhost:${port}`)
+  console.log(`Runing in http://localhost:${port}`)
 })
