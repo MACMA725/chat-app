@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
   })
 })
 
+//Halaman Chat
+app.get('/chat', (req, res) => {
+	res.send('Hai')
+})
 //Halaman Login
 app.get("/login", (reg, res) => {
   res.render('login', {
